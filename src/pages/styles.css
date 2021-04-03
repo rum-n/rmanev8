@@ -4,5 +4,11 @@
 
 .home-wrapper {
     margin-top: 3rem;
-    margin-left: 35rem;
+    margin-left: 33rem;
+    margin-right: 10rem;
+}
+
+.intro {
+    font-size: 1.2rem;
+    color: #889CB2;
 }

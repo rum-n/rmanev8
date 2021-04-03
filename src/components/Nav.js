@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import './Nav.css';
 import pic from './../assets/img/profile.png';
@@ -20,7 +20,7 @@ export default function Navbar() {
         <ul>
             <li>Projects</li>
             <Link to='/blog'><li>Blog</li></Link>
-            <li>About</li>
+            <li>Contact</li>
         </ul>
       </div>
     </div>

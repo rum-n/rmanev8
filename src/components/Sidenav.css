@@ -1,7 +1,7 @@
 .sidenav {
     position: absolute;
     margin-left: 10rem;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     width: 17rem;
 }
 
@@ -16,4 +16,9 @@
 
 .status-details {
     color: #988D99;
+}
+
+.icon { 
+    margin-right: 0.7rem;
+    color: #889CB2;
 }
