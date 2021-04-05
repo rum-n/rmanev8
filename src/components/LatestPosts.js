@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
-import './AllPosts.css';
+import './LatestPosts.css';
 
-export default function AllPosts() {
-  const [allPostsData, setAllPosts] = useState(null);
+export default function LatestPosts() {
+  const [latestPostsData, setLatestPosts] = useState(null);
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"][0..2]{
         title,
         slug,
+        publishedAt,
         mainImage{
           asset->{
           _id,
@@ -20,30 +21,24 @@ export default function AllPosts() {
       }
     }`
       )
-      .then((data) => setAllPosts(data))
+      .then((data) => setLatestPosts(data))
       .catch(console.error);
   }, []);
-
-  if (!allPostsData) {
-    return <h3 className='loading'>Loading...</h3>
-  } else {
-
-    console.log(allPostsData)
-  }
+  console.log(latestPostsData);
 
   return (
-    <div className='posts-wrapper'>
-        {allPostsData &&
-          allPostsData.map((post, index) => (
+    <div className='latest-posts-wrapper'>
+        {latestPostsData &&
+          latestPostsData.map((post, index) => (
             <Link to={"/blog/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
-                <div className='post-card'>
-                  <img className='post-img' src={post.mainImage ? post.mainImage.asset.url : ""} alt="" />
+                <div className='one-latest-post'>
                   <h2>{post.title}</h2>
+                  <p className='date'>{post.publishedAt}</p>
                 </div>
               </span>
             </Link>
           ))}
-      </div>
+    </div>
   );
 }

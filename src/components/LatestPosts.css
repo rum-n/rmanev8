@@ -1,0 +1,31 @@
+.latest-posts-wrapper {
+    margin-right: 10rem;
+    display: flex;
+    justify-content: row;
+}
+
+.latest-post-img {
+    width: 15rem;
+}
+
+.one-latest-post {
+    width: 15rem;
+    margin-right: 2rem;
+}
+
+.one-latest-post h2 {
+    transition: 0.3s;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.one-latest-post h2:hover {
+    color: #FF7373;
+    transition: 0.3s;
+}
+
+.date {
+    color:  #889CB2;
+    font-size: 0.9rem;
+    margin-top: 0;
+}

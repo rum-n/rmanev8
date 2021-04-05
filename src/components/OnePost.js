@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
+import './OnePost.css';
 
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-  return builder.image(source);
-}
+// const builder = imageUrlBuilder(sanityClient);
+// function urlFor(source) {
+//   return builder.image(source);
+// }
 
 export default function OnePost() {
   const [postData, setPostData] = useState(null);
@@ -35,21 +36,17 @@ export default function OnePost() {
       .catch(console.error);
   }, [slug]);
 
-  if (!postData) return <div>Loading...</div>;
+  if (!postData) return <h3 className='loading'>Loading...</h3>;
 
   return (
-    <div>
+    <div className='one-post-wrapper'>
       <div>
         <h2>{postData.title}</h2>
-        <div>
-          <img
-            src={urlFor(postData.authorImage).width(100).url()}
-            alt="Rumen Manev Blog"
-          />
+        {/* <div>
           <h4>{postData.name}</h4>
-        </div>
+        </div> */}
       </div>
-      <img src={urlFor(postData.mainImage).width(200).url()} alt="" />
+      {/* <img src={urlFor(postData.mainImage).url()} alt="" /> */}
       <div>
         <BlockContent
           blocks={postData.body}

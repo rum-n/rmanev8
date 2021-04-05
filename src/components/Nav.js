@@ -12,7 +12,7 @@ export default function Navbar() {
           <Link to='/'><img src={pic} alt='Rumen Manev'/></Link>
           </div>
           <div>
-            <h1>Rumen Manev</h1>
+            <h2>Rumen Manev</h2>
             <a href='https://twitter.com/room_n'>@room_n</a>
           </div>
       </div>

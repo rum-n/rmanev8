@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import AllPosts from "./components/AllPosts.js";
 import Navbar from "./components/Nav.js";
 import OnePost from "./components/OnePost.js";
 import Blog from "./pages/blog.js";

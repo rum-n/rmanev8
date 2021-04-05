@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import AllPosts from "../components/AllPosts";
 
 export default function Blog() {

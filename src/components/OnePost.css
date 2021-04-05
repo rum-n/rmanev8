@@ -1,0 +1,13 @@
+.one-post-wrapper {
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.one-post-wrapper p {
+    color: #889CB2;
+}
+
+.one-post-wrapper h2 {
+    text-align: center;
+}
