@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import './LatestPosts.css';
+import Moment from 'moment';
 
 export default function LatestPosts() {
   const [latestPostsData, setLatestPosts] = useState(null);
@@ -9,7 +10,7 @@ export default function LatestPosts() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"][0..2]{
+        `*[_type == "post"] | order(publishedAt desc)[0..2]{
         title,
         slug,
         publishedAt,
@@ -34,7 +35,7 @@ export default function LatestPosts() {
               <span key={index}>
                 <div className='one-latest-post'>
                   <h2>{post.title}</h2>
-                  <p className='date'>{post.publishedAt}</p>
+                  <p className='date'>{Moment(post.publishedAt).format('MMM DD, YYYY')}</p>
                 </div>
               </span>
             </Link>

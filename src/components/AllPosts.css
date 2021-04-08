@@ -1,18 +1,24 @@
 .posts-wrapper {
-    width: 70%;
+    width: 68%;
     margin: 4rem auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .post-img {
     width: 20rem;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .post-card {
     width: 20rem;
     margin-bottom: 4rem;
+    transition: 0.3s;
+    /* animation: down-bump 0.3s ease; */
+}
+
+.post-card:hover {
+    transition: 0.3s;
+    transform: scale(1.02);
 }

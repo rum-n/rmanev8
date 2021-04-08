@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import './AllPosts.css';
+import Moment from 'moment';
 
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
@@ -9,9 +10,10 @@ export default function AllPosts() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"] | order(publishedAt desc) {
         title,
         slug,
+        publishedAt,
         mainImage{
           asset->{
           _id,
@@ -39,6 +41,7 @@ export default function AllPosts() {
                 <div className='post-card'>
                   <img className='post-img' src={post.mainImage ? post.mainImage.asset.url : ""} alt="" />
                   <h2>{post.title}</h2>
+                  <p className='date'>{Moment(post.publishedAt).format('MMM DD, YYYY')}</p>
                 </div>
               </span>
             </Link>
