@@ -1,7 +1,8 @@
 .one-post-wrapper {
-    width: 70%;
+    width: 60%;
     margin: auto;
     font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 .one-post-wrapper p {
