@@ -27,7 +27,6 @@ export default function AllPosts() {
   if (!allPostsData) {
     return <h3 className='loading'>Loading...</h3>
   } else {
-
     console.log(allPostsData)
   }
 
