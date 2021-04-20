@@ -16,6 +16,14 @@ a {
   text-decoration: none;
 }
 
+::selection {
+  background: #FF7373; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: #FF7373; /* Gecko Browsers */
+}
+
 /* 
 pink: #FF7373
 light-blue: #034077

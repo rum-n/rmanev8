@@ -25,41 +25,76 @@
     margin-top: 5rem;
 }
 
-.circle-sketch-highlight{
-    position:relative;
-  }
-  .circle-sketch-highlight:before{
-    content:"";
-    z-index:-1;
-    left:-0.5em;
-    top:-0.1em;
-    border-width:2px;
-    border-style:solid;
-    border-color:#FF7373;
-    position:absolute;
-    border-right-color:transparent;
-    width:100%;
-    height:1em;
-    transform:rotate(2deg);
-    opacity:0.7;
-    border-radius:50%;
-    padding:0.1em 0.25em;
-  }
-  .circle-sketch-highlight:after{
-    content:"";
-    z-index:-1;
-    left:-0.5em;
-    top:0.1em;
-    padding:0.1em 0.25em;
-    border-width:2px;
-    border-style:solid;
-    border-color:#FF7373;
-    border-left-color:transparent;
-    border-top-color:transparent;
-    position:absolute;
-    width:100%;
-    height:1em;
-    transform:rotate(-1deg);
-    opacity:0.7;
-    border-radius:50%;
-  }
+/* CONTACT PAGE */
+form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+}
+
+input, textarea, .send {
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid #988D99;
+    padding: 0.2rem 0.5rem;
+    /* background-color: #034077; */
+    background-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    color: white;
+    font-size: 1rem;
+}
+
+input {
+    height: 2rem;
+}
+
+textarea {
+    height: 10rem;
+}
+
+.send {
+    /* margin-top: 1rem; */
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 5rem;
+    cursor: pointer;
+    background: #988D99;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.send:hover {
+    background: #FF7373;
+    transition: 0.3s;
+}
+
+.contact-wrapper {
+    margin-top: 3rem;
+    margin-left: 33rem;
+    margin-right: 10rem;
+    display: flex;
+    color: white;
+}
+
+.column-2 {
+    margin-left: 4rem;
+}
+
+.column-2 ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.column-2 ul li:hover {
+    color: #FF7373;
+    transition: 0.3s;
+    cursor: pointer;
+}
