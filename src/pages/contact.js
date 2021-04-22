@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidenav from "../components/Sidenav";
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
     const [state, handleSubmit] = useForm("xvodgbdk");
+    const [value, setValue] = useState('');
+
     if (state.succeeded) {
-        return <p>Thanks for reaching out!</p>;
+        return <div>
+            <Sidenav/>
+            <div className='contact-wrapper'>
+                <p>Thanks for reaching out!</p>;
+                </div>
+            </div>
+        }
+    
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    };
+
+    const btnDisabled = () => {
+        if (state.submitting || !value) {
+            return true;
+        }
     }
+
 
   return (
     <React.Fragment>
@@ -18,7 +36,7 @@ export default function Contact() {
                     <input
                         placeholder="Email Address"
                         id="email"
-                        type="email" 
+                        type="email"
                         name="email"
                     />
                     <ValidationError 
@@ -30,13 +48,15 @@ export default function Contact() {
                         placeholder="Your message"
                         id="message"
                         name="message"
+                        value={value}
+                        onChange={handleChange}
                     />
                     <ValidationError 
                         prefix="Message" 
                         field="message"
                         errors={state.errors}
                     />
-                    <button className='send' type="submit" disabled={state.submitting}>
+                    <button className='send' type="submit" disabled={btnDisabled()}>
                         Send
                     </button>
                 </form>
@@ -44,11 +64,11 @@ export default function Contact() {
             <div className='column-2'>
                 <label>Other ways to reach me</label>
                 <ul>
-                    <li>Twitter</li>
-                    <li>LinkedIn</li>
-                    <li>GitHub</li>
-                    <li>Medium</li>
-                    <li>Xing</li>
+                    <li><a target="_blank" href='https://twitter.com/room_n'>Twitter</a></li>
+                    <li><a target="_blank" href='https://linkedin.com/in/rmanev'>LinkedIn</a></li>
+                    <li><a target="_blank" href='https://github.com/rum_n'>GitHub</a></li>
+                    <li><a target="_blank" href='https://room-n.medium.com/'>Medium</a></li>
+                    <li><a target="_blank" href='https://www.xing.com/profile/Rumen_Manev'>Xing</a></li>
                 </ul>
             </div>
         </div>

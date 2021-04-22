@@ -73,6 +73,12 @@ textarea {
     transition: 0.3s;
 }
 
+.send:disabled {
+    background: #988d9977;
+    color: #988D99;
+    cursor: default;
+}
+
 .contact-wrapper {
     margin-top: 3rem;
     margin-left: 33rem;
@@ -91,6 +97,11 @@ textarea {
     line-height: 2rem;
     font-size: 1.4rem;
     transition: 0.3s;
+}
+
+.column-2 ul a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .column-2 ul li:hover {
