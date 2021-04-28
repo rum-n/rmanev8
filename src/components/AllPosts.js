@@ -40,7 +40,7 @@ export default function AllPosts() {
               <span key={index}>
                 <div className='post-card'>
                   {/* <img className='post-img' src={post.mainImage ? post.mainImage.asset.url : ""} alt="" /> */}
-                  <h3>{post.title}</h3>
+                  <h2>{post.title}</h2>
                   <p className='date'>{Moment(post.publishedAt).format('MMM DD, YYYY')}</p>
                 </div>
               </span>
