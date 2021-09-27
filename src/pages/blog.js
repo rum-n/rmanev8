@@ -1,6 +1,6 @@
 import React from "react";
-import AllPosts from "../components/AllPosts";
-import SideNav from "../components/Sidenav";
+import AllPosts from "../components/allposts/AllPosts";
+import SideNav from "../components/sidenav/Sidenav";
 
 export default function Blog() {
 

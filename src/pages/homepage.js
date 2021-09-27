@@ -1,6 +1,6 @@
 import React from "react";
-import LatestPosts from "../components/LatestPosts";
-import Sidenav from "../components/Sidenav";
+import LatestPosts from "../components/latest-posts/LatestPosts";
+import Sidenav from "../components/sidenav/Sidenav";
 import './styles.css';
 
 export default function Homepage() {

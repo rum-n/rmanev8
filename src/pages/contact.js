@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidenav from "../components/Sidenav";
+import Sidenav from "../components/sidenav/Sidenav";
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {

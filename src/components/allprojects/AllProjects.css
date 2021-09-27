@@ -1,0 +1,36 @@
+.allprojects-wrapper {
+    width: 68%;
+    height: 30rem;
+    margin: 2rem auto;
+    overflow-y: scroll;
+}
+
+.project-card {
+    border-radius: 6px;
+    width: 40rem;
+    transition: 0.3s;
+    padding: 0.5rem 1rem;
+}
+
+.project-image {
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 2.5rem;
+    width: 15rem;
+    border: 1px solid white;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.project-card:hover {
+    transition: 0.3s;
+    transform: scale(1.01);
+    background-color: rgba(3, 65, 119, 0.3);
+}

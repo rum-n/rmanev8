@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Nav.css';
-import pic from './../assets/img/profile.png';
+import pic from './../../assets/img/profile.png';
 
 export default function Navbar() {
 
@@ -18,7 +18,7 @@ export default function Navbar() {
       </div>
       <div className='menu'>
         <ul>
-            <li>Projects</li>
+            <Link to='/projects'><li>Projects</li></Link>
             <Link to='/blog'><li>Blog</li></Link>
             <Link to='/contact'><li>Contact</li></Link>
         </ul>
