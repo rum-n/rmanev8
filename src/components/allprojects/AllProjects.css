@@ -1,23 +1,33 @@
+.project-full {
+    display: flex;
+    flex-direction: row;
+}
+
 .allprojects-wrapper {
-    width: 68%;
+    width: 40%;
     height: 30rem;
-    margin: 2rem auto;
+    margin: 2rem 4rem 2rem 10rem;
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
 .project-card {
     border-radius: 6px;
-    width: 40rem;
     transition: 0.3s;
     padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.project-image-wrapper {
+    width: 40%;
+    height: 30rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    overflow-y: scroll;
 }
 
 .project-image {
-    position: absolute;
-    margin-left: 10rem;
-    margin-top: 2.5rem;
-    width: 15rem;
-    border: 1px solid white;
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
