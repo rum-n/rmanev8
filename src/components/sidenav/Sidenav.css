@@ -22,3 +22,9 @@
     margin-right: 0.7rem;
     color: #889CB2;
 }
+
+@media only screen and (max-width: 1300px) {
+    .sidenav {
+        display: none;
+    }
+}

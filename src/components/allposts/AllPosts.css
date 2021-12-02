@@ -2,10 +2,6 @@
     width: 68%;
     height: 30rem;
     margin: 2rem auto;
-    /* display: flex; */
-    /* flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around; */
     overflow-y: scroll;
 }
 
@@ -33,4 +29,21 @@
     transition: 0.3s;
     transform: scale(1.01);
     background-color: rgba(3, 65, 119, 0.3);
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .posts-wrapper {
+        /* width: 68%; */
+        height: auto;
+        margin: 2rem auto;
+        overflow: auto;
+    }
+
+    .post-card {
+        border-radius: 6px;
+        width: auto;
+        transition: 0.3s;
+        padding: 0.5rem 1rem;
+    }
 }

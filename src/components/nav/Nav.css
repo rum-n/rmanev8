@@ -58,3 +58,23 @@
     color: #FF7373;
     transition: 0.3s;
 }
+
+@media only screen and (max-width: 800px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 7rem;
+        margin: 0 auto 8rem;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .menu ul li {
+        margin-left: 1rem;
+    }
+}

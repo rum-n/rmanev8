@@ -1,7 +1,6 @@
 .latest-posts-wrapper {
     margin-right: 10rem;
     display: flex;
-    justify-content: row;
 }
 
 .latest-post-img {
@@ -28,4 +27,16 @@
     color:  #889CB2;
     font-size: 0.9rem;
     margin-top: 0;
+}
+
+@media only screen and (max-width: 1300px) {
+    .one-latest-post h2 {
+        font-size: 1.2rem;
+    }
+
+    .latest-posts-wrapper {
+        margin-right: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
 }
