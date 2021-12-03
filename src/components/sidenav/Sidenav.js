@@ -11,15 +11,15 @@ export default function Sidenav() {
     <div className='sidenav'>
         <div>
             <h2><span className='icon'><RiFocus3Line/></span>Focusing on</h2>
-            <p className='status-details'>Learning Angular, building ArtQ, and spending time with my son.</p>
+            <p className='status-details'>Improving my Angular skills and learning some Java/Spring.</p>
         </div>
         <div>
             <h2><span className='icon'><VscLoading/></span>Preparing for</h2>
-            <p className='status-details'>A half-marathon after more than a year of hiatus from running.</p>
+            <p className='status-details'>Winter season.</p>
         </div>
         <div>
             <h2><span className='icon'><BiGlassesAlt/></span>Curious about</h2>
-            <p className='status-details'>NFTs and alternative investment opportunities.</p>
+            <p className='status-details'>Generative art with Processing and p5.js</p>
         </div>
         <div>
             <h2><span className='icon'><RiMapPinLine/></span>Currently in</h2>
