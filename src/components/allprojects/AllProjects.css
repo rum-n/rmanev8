@@ -1,61 +1,70 @@
 .project-full {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .allprojects-wrapper {
-    width: 40%;
-    height: 30rem;
-    margin: 2rem 4rem 2rem 10rem;
-    overflow-x: hidden;
-    overflow-y: scroll;
+  /* width: 40%; */
+  height: 30rem;
+  /* margin: 2rem 4rem 2rem 10rem; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.tabs {
+  width: 40%;
+  margin: 2rem 4rem 2rem 10rem;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
 }
 
 .project-card {
-    border-radius: 6px;
-    transition: 0.3s;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .project-image-wrapper {
-    width: 40%;
-    height: 30rem;
-    margin-right: 5rem;
-    margin-top: 2rem;
-    overflow-y: scroll;
+  width: 40%;
+  height: 30rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+  overflow-y: scroll;
 }
 
 .project-image {
-    width: 100%;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+  background: #ff0000;
 }
 
 .project-card:hover {
-    transition: 0.3s;
-    transform: scale(1.01);
-    background-color: rgba(3, 65, 119, 0.3);
+  transition: 0.3s;
+  transform: scale(1.01);
+  background-color: rgba(3, 65, 119, 0.3);
 }
 
+@media only screen and (max-width: 900px) {
+  .project-image-wrapper {
+    display: none;
+  }
 
-@media only screen and (max-width: 900px) {    
-    .project-image-wrapper {
-        display: none;
-    }
-
-    .allprojects-wrapper {
-        width: 60%;
-        height: 30rem;
-        margin: 2rem 0 2rem 10rem;
-        overflow-x: hidden;
-        overflow-y: scroll;
-    }
+  .allprojects-wrapper {
+    width: 60%;
+    height: 30rem;
+    margin: 2rem 0 2rem 10rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
