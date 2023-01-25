@@ -11,6 +11,7 @@ import pod from "../../img/podcast1.png";
 import res from "../../img/results1.png";
 import vault from "../../img/vault.png";
 import daves from "../../img/daves.png";
+import bv from "../../img/bv.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
@@ -42,6 +43,9 @@ export default function AllPosts() {
         setClicked(fk);
         break;
       case 21:
+        setClicked(bv);
+        break;
+      case 22:
         setClicked(daves);
         break;
     }
@@ -55,7 +59,7 @@ export default function AllPosts() {
             <Tab style={{ color: "#FF7373" }} onClick={() => setClicked(pod)}>
               Personal
             </Tab>
-            <Tab style={{ color: "#FF7373" }} onClick={() => setClicked(daves)}>
+            <Tab style={{ color: "#FF7373" }} onClick={() => setClicked(bv)}>
               Clients
             </Tab>
           </TabList>
