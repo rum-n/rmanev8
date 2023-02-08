@@ -1,140 +1,142 @@
 .blog-wrapper {
-    margin-left: 20rem;
+  margin-left: 20rem;
 }
 
 .projects-wrapper {
-    /* margin-left: 30rem; */
+  /* margin-left: 30rem; */
 }
 
 .home-wrapper {
-    margin-top: 3rem;
-    margin-left: 33rem;
-    margin-right: 10rem;
+  margin-top: 3rem;
+  margin-left: 33rem;
+  margin-right: 10rem;
 }
 
 .intro {
-    font-size: 1.2rem;
-    color: #889CB2;
+  font-size: 1.2rem;
+  color: #889cb2;
 }
 
 .latest-title {
-    margin: 2rem 0 0;
-    color: #988D99;
-    font-size: 0.9rem;
-    font-style: italic;
+  margin: 2rem 0 0;
+  color: #988d99;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .loading {
-    text-align: center;
-    margin-top: 5rem;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 /* CONTACT PAGE */
 form {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    width: 25rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
 }
 
-input, textarea, .send {
-    margin-top: 1rem;
-    border-radius: 5px;
-    border: none;
-    border: 2px solid #988D99;
-    padding: 0.2rem 0.5rem;
-    background-color: transparent;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+input,
+textarea,
+.send {
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #988d99;
+  padding: 0.2rem 0.5rem;
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    color: white;
-    font-size: 1rem;
+  color: white;
+  font-size: 1rem;
 }
 
 input {
-    height: 2rem;
+  height: 2rem;
 }
 
 textarea {
-    height: 10rem;
+  height: 10rem;
 }
 
 .send {
-    /* margin-top: 1rem; */
-    border: none;
-    padding: 0.5rem 1rem;
-    width: 5rem;
-    cursor: pointer;
-    background: #988D99;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: 0.3s;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 5rem;
+  cursor: pointer;
+  background: #988d99;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
 .send:hover {
-    background: #FF7373;
-    transition: 0.3s;
+  background: #ff7373;
+  transition: 0.3s;
 }
 
 .send:disabled {
-    background: #988d9977;
-    color: #988D99;
-    cursor: default;
+  background: #988d9977;
+  color: #988d99;
+  cursor: default;
 }
 
 .contact-wrapper {
-    margin-top: 3rem;
-    margin-left: 33rem;
-    margin-right: 10rem;
-    display: flex;
-    color: white;
+  margin-top: 3rem;
+  margin-left: 33rem;
+  margin-right: 10rem;
+  display: flex;
+  color: white;
 }
 
 .column-2 {
-    margin-left: 4rem;
+  margin-left: 4rem;
 }
 
 .column-2 ul {
-    list-style: none;
-    padding-left: 0;
-    line-height: 2rem;
-    font-size: 1.4rem;
-    transition: 0.3s;
+  list-style: none;
+  padding-left: 0;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  transition: 0.3s;
 }
 
-.column-2 ul a{
-    text-decoration: none;
-    color: inherit;
+.column-2 ul a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .column-2 ul li:hover {
-    color: #FF7373;
-    transition: 0.3s;
-    cursor: pointer;
+  color: #ff7373;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1300px) {
-    .home-wrapper {
-        margin: 2rem auto 0 auto;
-        width: 60%;
-    }
+@media only screen and (max-width: 1000px) {
+  .home-wrapper {
+    margin: 2rem auto 0 auto;
+    width: 60%;
+  }
 
-    .blog-wrapper {
-        margin-left: 0;
-    }
+  .blog-wrapper {
+    margin-left: 0;
+  }
 
-    .contact-wrapper {
-        margin-top: 3rem;
-        margin-left: 5rem;
-        flex-direction: column;
-    }
-    
-    form {
-        padding-right: 5rem;
-    }
+  .contact-wrapper {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    flex-direction: column;
+    width: auto;
+  }
 
-    .column-2 {
-        margin-left: 0;
-        margin-top: 2rem;
-    }
+  form {
+    width: 20rem;
+  }
+
+  .column-2 {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 }
