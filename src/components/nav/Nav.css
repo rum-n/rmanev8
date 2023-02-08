@@ -1,80 +1,82 @@
 .navbar {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 7rem;
-    margin: 1rem auto;
-    justify-content: space-between;
+  display: flex;
+  width: 80%;
+  height: 7rem;
+  margin: 1rem auto;
+  justify-content: space-between;
 }
 
 .logo {
-    line-height: 2rem;
-    display: flex;
-    flex-direction: row;
-    margin-top: 1rem;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
 }
 
 .logo h2 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .logo a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: #889CB2;
-    transition: 0.3s;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #889cb2;
+  transition: 0.3s;
 }
 
 .logo a:hover {
-    color: #FF7373;
-    transition: 0.3s;
+  color: #ff7373;
+  transition: 0.3s;
 }
 
-.avatar img{
-    width: 4.5rem;
-    border-radius: 50%;
-    margin-right: 1.5rem;
-    margin-top: 1rem;
+.avatar img {
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
 }
 
 .menu {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
-.menu ul{
-    list-style: none;
+.menu ul {
+  list-style: none;
 }
 
 .menu ul li {
-    display: inline;
-    color: #FFFCF3;
-    margin-left: 2rem;
-    cursor: pointer;
-    transition: 0.3s;
+  display: inline;
+  color: #fffcf3;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .menu ul li:hover {
-    color: #FF7373;
-    transition: 0.3s;
+  color: #ff7373;
+  transition: 0.3s;
 }
 
 @media only screen and (max-width: 800px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        height: 7rem;
-        margin: 0 auto 8rem;
-        justify-content: space-between;
-    }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 7rem;
+    margin: 0 auto 4rem;
+  }
 
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .menu ul li {
-        margin-left: 1rem;
-    }
+  .menu ul {
+    list-style: none;
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin: auto;
+    padding: 0;
+  }
+
+  .menu ul li {
+    margin: 0;
+  }
 }
