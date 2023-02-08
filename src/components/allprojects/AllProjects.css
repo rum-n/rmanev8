@@ -58,10 +58,10 @@
   }
 
   .allprojects-wrapper {
-    width: 60%;
-    height: 30rem;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    /* overflow-y: scroll; */
   }
 
   .tabs {
