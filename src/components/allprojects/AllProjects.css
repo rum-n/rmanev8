@@ -1,19 +1,20 @@
 .project-full {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  width: 80%;
 }
 
 .allprojects-wrapper {
-  /* width: 40%; */
   height: 30rem;
-  /* margin: 2rem 4rem 2rem 10rem; */
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
 .tabs {
   width: 40%;
-  margin: 2rem 4rem 2rem 10rem;
+  margin: 2rem 0rem;
 }
 
 .tab {
@@ -44,10 +45,6 @@
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #ff0000;
-}
 
 .project-card:hover {
   transition: 0.3s;
@@ -63,8 +60,12 @@
   .allprojects-wrapper {
     width: 60%;
     height: 30rem;
-    margin: 2rem 0 2rem 10rem;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  .tabs {
+    width: auto;
+    margin: 2rem 4rem 2rem 0rem;
   }
 }
