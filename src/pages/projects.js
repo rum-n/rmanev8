@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import AllProjects from "../components/allprojects/AllProjects";
-import { Link } from "react-router-dom";
+import { useSpring, animated } from "@react-spring/web";
 
 export default function Projects() {
-
+  const [props, api] = useSpring(
+    () => ({
+      from: { opacity: 0 },
+      to: { opacity: 1 },
+    }),
+    []
+  );
   return (
-    <div className="projects-wrapper">
-      <AllProjects/>
-    </div>
+    <animated.div style={props} className="projects-wrapper">
+      <AllProjects />
+    </animated.div>
   );
 }
