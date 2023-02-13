@@ -10,7 +10,6 @@ export default function AllProjects() {
   const [selected, setSelected] = useState({});
 
   useEffect(() => {
-    setLoading(true);
     setClicked(selected.image);
   }, [selected]);
 
