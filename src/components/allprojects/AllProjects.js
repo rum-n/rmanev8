@@ -6,14 +6,12 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 export default function AllProjects() {
-  const [loading, setLoading] = useState(false);
   const [clicked, setClicked] = useState();
   const [selected, setSelected] = useState({});
 
   useEffect(() => {
     setLoading(true);
     setClicked(selected.image);
-    setLoading(false);
   }, [selected]);
 
   return (
@@ -68,8 +66,7 @@ export default function AllProjects() {
         </Tabs>
       </div>
       <div className="project-image-wrapper">
-        {!loading && <img className="project-image" src={clicked} />}
-        {loading && <p>Loading...</p>}
+        <img className="project-image" src={clicked} />
       </div>
     </div>
   );

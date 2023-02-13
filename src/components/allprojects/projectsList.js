@@ -48,8 +48,7 @@ export default [
     link: "https://artpage.netlify.app",
     title: "Artpage",
     image: artpage,
-    blurb:
-      "Second version of the indoor climbing gym list, I decided to lose the map and focus on a detailed list with a filter.",
+    blurb: "A simple landing page builder for artists.",
     techstack: "Tech Stack: React",
   },
   {
@@ -61,12 +60,4 @@ export default [
       "Visualizing race results from various running events. I wanted to play around with data visualizations using Highcharts, so I used it for something I like - running.",
     techstack: "Tech Stack: HTML/CSS/JS, Highcharts, R",
   },
-  // {
-  //     "id": 7,
-  //     "link": "https://rum-n.github.io/thewordfuck/",
-  //     "title": "The Word Fuck",
-  //     // "image": word,
-  //     "blurb": "I wanted to test out data visualization with D3. I suppose it might have been something more informative, but also shut up. Note: you should allow pop-ups, in order to view the chart.",
-  //     "techstack": "Tech Stack: HTML/CSS/JS, D3.js"
-  // }
 ];
