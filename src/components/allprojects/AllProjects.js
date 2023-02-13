@@ -1,65 +1,36 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./AllProjects.css";
 import projectsData from "./projectsList";
 import clientProjects from "./clientProjects";
-import Moment from "moment";
-import fk from "../../img/fk.png";
-import artpage from "../../img/artpage.png";
-import grip from "../../img/grip.png";
-import pod from "../../img/podcast1.png";
-import res from "../../img/results1.png";
-import vault from "../../img/vault.png";
-import daves from "../../img/daves.png";
-import bv from "../../img/bv.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-export default function AllPosts() {
-  const [data, setData] = useState(projectsData);
-  const [clicked, setClicked] = useState(pod);
+export default function AllProjects() {
+  const [loading, setLoading] = useState(false);
+  const [clicked, setClicked] = useState();
+  const [selected, setSelected] = useState({});
 
-  const shownImage = (id) => {
-    switch (id) {
-      case 1:
-        setClicked(pod);
-        break;
-      case 2:
-        setClicked(fk);
-        break;
-      case 3:
-        setClicked(vault);
-        break;
-      case 4:
-        setClicked(grip);
-        break;
-      case 5:
-        setClicked(artpage);
-        break;
-      case 6:
-        setClicked(res);
-        break;
-      case 7:
-        setClicked(fk);
-        break;
-      case 21:
-        setClicked(bv);
-        break;
-      case 22:
-        setClicked(daves);
-        break;
-    }
-  };
+  useEffect(() => {
+    setLoading(true);
+    setClicked(selected.image);
+    setLoading(false);
+  }, [selected]);
 
   return (
     <div className="project-full">
       <div className="tabs">
         <Tabs>
           <TabList style={{ border: "none" }}>
-            <Tab style={{ color: "#FF7373" }} onClick={() => setClicked(pod)}>
+            <Tab
+              style={{ color: "#FF7373" }}
+              onClick={() => setClicked(selected.image)}
+            >
               Personal
             </Tab>
-            <Tab style={{ color: "#FF7373" }} onClick={() => setClicked(bv)}>
+            <Tab
+              style={{ color: "#FF7373" }}
+              onClick={() => setClicked(selected.image)}
+            >
               Clients
             </Tab>
           </TabList>
@@ -69,7 +40,7 @@ export default function AllPosts() {
               {projectsData.map((project) => (
                 <div
                   className="project-card"
-                  onClick={() => shownImage(project.id)}
+                  onClick={() => setSelected(project)}
                 >
                   <h2>{project.title}</h2>
                   <p>{project.blurb}</p>
@@ -84,7 +55,7 @@ export default function AllPosts() {
               {clientProjects.map((project) => (
                 <div
                   className="project-card"
-                  onClick={() => shownImage(project.id)}
+                  onClick={() => setSelected(project)}
                 >
                   <h2>{project.title}</h2>
                   <p>{project.blurb}</p>
@@ -97,7 +68,8 @@ export default function AllPosts() {
         </Tabs>
       </div>
       <div className="project-image-wrapper">
-        <img className="project-image" src={clicked} />
+        {!loading && <img className="project-image" src={clicked} />}
+        {loading && <p>Loading...</p>}
       </div>
     </div>
   );
