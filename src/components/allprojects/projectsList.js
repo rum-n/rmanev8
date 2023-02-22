@@ -4,10 +4,20 @@ import grip from "../../img/grip.png";
 import pod from "../../img/podcast1.png";
 import res from "../../img/results1.png";
 import vault from "../../img/vault.png";
+import web3 from "../../img/web3.png";
 
 export default [
   {
-    id: 1,
+    id: 7,
+    link: "https://webthreegigs.com",
+    title: "Web3 Gigs",
+    image: web3,
+    blurb:
+      "I wanted to learn Vue.js, so I created a job board for remote positions in the Web3 space, using Vue and Strapi.",
+    techstack: "Tech Stack: Vue.js, Strapi",
+  },
+  {
+    id: 6,
     link: "https://podcastchatterbox.netlify.app",
     title: "Podcast Chatterbox",
     image: pod,
@@ -16,7 +26,7 @@ export default [
     techstack: "Tech Stack: React, AWS",
   },
   {
-    id: 2,
+    id: 5,
     link: "https://finderskeepers.netlify.app",
     title: "Finders/Keepers 2.0",
     image: fk,
@@ -25,7 +35,7 @@ export default [
     techstack: "Tech Stack: React, Ghost",
   },
   {
-    id: 3,
+    id: 4,
     link: "https://reactvault.com/",
     title: "React Vault",
     image: vault,
@@ -35,7 +45,7 @@ export default [
       "Tech Stack: React, Boostrap, Node.js, Express, GraphQL, MongoDB",
   },
   {
-    id: 4,
+    id: 3,
     link: "https://gripindoor.com",
     title: "Gripindoor 2.0",
     image: grip,
@@ -44,7 +54,7 @@ export default [
     techstack: "Tech Stack: React, Material UI",
   },
   {
-    id: 5,
+    id: 2,
     link: "https://artpage.netlify.app",
     title: "Artpage",
     image: artpage,
@@ -52,7 +62,7 @@ export default [
     techstack: "Tech Stack: React",
   },
   {
-    id: 6,
+    id: 1,
     link: "https://results.netlify.com/",
     title: "Race Results",
     image: res,
